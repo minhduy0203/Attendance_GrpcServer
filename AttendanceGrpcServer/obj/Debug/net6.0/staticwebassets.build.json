@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I5jqiNsLQShYo+VC83S8U5saSbYkWTHQVSv/Krisx+c=",
+  "Source": "AttendanceGrpcServer",
+  "BasePath": "_content/AttendanceGrpcServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

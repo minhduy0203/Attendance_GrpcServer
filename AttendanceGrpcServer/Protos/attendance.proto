@@ -1,0 +1,19 @@
+﻿syntax = "proto3";
+option csharp_namespace = "AttendanceGrpcServer";
+
+service Attendancer
+{
+   rpc  AttendStudents(AttendanceListRequest) returns (AttendanceListResponse);
+}
+
+message AttendanceListRequest {
+	repeated int32 sid = 1;
+	int32 scheduleId = 2;
+	int32 status = 3;
+}
+
+message AttendanceListResponse {
+	repeated int32 sid = 1;
+	string message = 2;
+}
+

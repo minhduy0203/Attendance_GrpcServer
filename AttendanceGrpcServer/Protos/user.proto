@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "AttendanceGrpcServer";
+
+service UserLogin {
+	rpc Login (LoginRequest) returns (Response);
+}
+
+message LoginRequest {
+  string Email = 1;
+  string Password = 2;
+}
+message Response {
+	LoginResponse result = 1;
+	string message = 2;
+
+}
+// The response message containing the greetings.
+message LoginResponse {
+  string token = 1;
+}
+
+

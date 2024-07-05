@@ -1,0 +1,87 @@
+﻿syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "AttendanceGrpcServer";
+
+service Scheduler
+{
+    rpc GetSchedule(GetScheduleRequest) returns (ScheduleResponse);
+    rpc GetStudentSchedule (ScheduleRequest) returns ( ListScheduleResponse);
+    rpc GetTeacherSchedule (ScheduleRequest) returns ( ListScheduleResponse);
+    rpc GetStudentCourseAttendance (StudentCourseAttenaceRequest) returns (ListStudentCourseAttenanceResponse);
+
+}
+
+message ListStudentCourseAttenanceResponse {
+    repeated AttendanceDto result = 1;
+    string message = 2;
+
+}
+
+message ListScheduleResponse {
+   repeated ScheduleResponse result = 1;
+}
+message ScheduleRequest
+{
+  int32 week = 1;
+  int32 year = 2;
+  int32 id = 3;
+}
+
+message StudentCourseAttenaceRequest {
+    int32 sid = 1;
+    int32 cid = 2;
+}
+
+
+message GetScheduleRequest {
+    int32 id = 1;
+}
+message ScheduleResponse
+{
+       int32 id = 1;
+       int32 slot = 2;
+       google.protobuf.Timestamp date = 3;
+       int32 courseId = 4;
+       CourseDto course =5;
+       int32 teacherId = 6;
+       int32 roomId = 7;
+       RoomDto room = 8;
+       repeated StudentSchedulesDTO StudentSchedules = 9;
+       
+}
+
+message AttendanceDto {
+    int32 ScheduleId = 1;
+    ScheduleResponse Schedule = 2;
+    int32 Status = 3;
+}
+// The response message containing the greetings.
+message RoomDto {
+    int32 id = 1;
+    string name = 2;
+}
+
+message CourseDto {
+    int32 id = 1;
+    string code = 2;
+    string name = 3;
+    string TimeSlot = 4;
+    google.protobuf.Timestamp StartDate =5;
+    google.protobuf.Timestamp EndDate = 6;
+    int32 SubjectId = 7;
+    SubjectDto subject = 8;
+}
+
+message SubjectDto {
+      int32 id = 1;
+      string name = 2;
+      int32 NumberSlot = 3;
+   
+}
+
+message StudentSchedulesDTO {
+    int32 StudentId = 1;
+    int32 ScheduleId = 2;
+    int32 Status = 3;
+    
+}

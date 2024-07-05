@@ -1,0 +1,2 @@
+obj\Debug\net6.0\Protos/Attendance.cs \
+obj\Debug\net6.0\Protos/AttendanceGrpc.cs: Protos/attendance.proto

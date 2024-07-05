@@ -1,0 +1,42 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "AttendanceGrpcServer";
+
+service StudentCourser
+{
+    rpc GetListStudentCourse (StudentCourseRequest) returns ( StudentCourseResponse);
+}
+
+message ListStudentCourse {
+    repeated StudentCourseResponse result = 1;
+    string message = 2;
+}
+
+
+message StudentCourseResponse
+{
+  int32 StudentId = 1;
+  int32 CourseId = 2;
+  CourseDto Course = 4;
+}
+
+message StudentCourseRequest {
+    int32 id = 1;
+}
+
+message CourseDto {
+    int32 id = 1;
+    string code = 2;
+    string name = 3;
+    string TimeSlot = 4;
+    google.protobuf.Timestamp StartDate =5;
+    google.protobuf.Timestamp EndDate = 6;
+    int32 SubjectId = 7;
+    SubjectDto subject = 8;
+}
+message SubjectDto {
+    int32 id = 1;
+    string name = 2;
+    int32 NumberSlot = 3;
+}
+
