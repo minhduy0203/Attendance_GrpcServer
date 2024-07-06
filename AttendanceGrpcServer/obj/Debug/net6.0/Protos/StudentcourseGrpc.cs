@@ -48,15 +48,15 @@ namespace AttendanceGrpcServer {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AttendanceGrpcServer.StudentCourseRequest> __Marshaller_StudentCourseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.StudentCourseRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::AttendanceGrpcServer.StudentCourseResponse> __Marshaller_StudentCourseResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.StudentCourseResponse.Parser));
+    static readonly grpc::Marshaller<global::AttendanceGrpcServer.ListStudentCourse> __Marshaller_ListStudentCourse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.ListStudentCourse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::AttendanceGrpcServer.StudentCourseRequest, global::AttendanceGrpcServer.StudentCourseResponse> __Method_GetListStudentCourse = new grpc::Method<global::AttendanceGrpcServer.StudentCourseRequest, global::AttendanceGrpcServer.StudentCourseResponse>(
+    static readonly grpc::Method<global::AttendanceGrpcServer.StudentCourseRequest, global::AttendanceGrpcServer.ListStudentCourse> __Method_GetListStudentCourse = new grpc::Method<global::AttendanceGrpcServer.StudentCourseRequest, global::AttendanceGrpcServer.ListStudentCourse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetListStudentCourse",
         __Marshaller_StudentCourseRequest,
-        __Marshaller_StudentCourseResponse);
+        __Marshaller_ListStudentCourse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +69,7 @@ namespace AttendanceGrpcServer {
     public abstract partial class StudentCourserBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::AttendanceGrpcServer.StudentCourseResponse> GetListStudentCourse(global::AttendanceGrpcServer.StudentCourseRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::AttendanceGrpcServer.ListStudentCourse> GetListStudentCourse(global::AttendanceGrpcServer.StudentCourseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -92,7 +92,7 @@ namespace AttendanceGrpcServer {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, StudentCourserBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetListStudentCourse, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AttendanceGrpcServer.StudentCourseRequest, global::AttendanceGrpcServer.StudentCourseResponse>(serviceImpl.GetListStudentCourse));
+      serviceBinder.AddMethod(__Method_GetListStudentCourse, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AttendanceGrpcServer.StudentCourseRequest, global::AttendanceGrpcServer.ListStudentCourse>(serviceImpl.GetListStudentCourse));
     }
 
   }

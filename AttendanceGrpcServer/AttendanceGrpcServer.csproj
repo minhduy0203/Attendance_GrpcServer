@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Protos\attendance.proto" />
     <None Remove="Protos\schedule.proto" />
+    <None Remove="Protos\studentcourse.proto" />
     <None Remove="Protos\user.proto" />
   </ItemGroup>
 
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\studentcourse.proto" GrpcServices="Server" />
     <Protobuf Include="Protos\user.proto" GrpcServices="Server" />
   </ItemGroup>
 
@@ -35,10 +37,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Protos\studentcourse.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>

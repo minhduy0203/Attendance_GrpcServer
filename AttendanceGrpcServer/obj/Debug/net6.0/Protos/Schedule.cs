@@ -46,16 +46,17 @@ namespace AttendanceGrpcServer {
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIRCglTdWJqZWN0SWQY",
             "ByABKAUSHAoHc3ViamVjdBgIIAEoCzILLlN1YmplY3REdG8iOgoKU3ViamVj",
             "dER0bxIKCgJpZBgBIAEoBRIMCgRuYW1lGAIgASgJEhIKCk51bWJlclNsb3QY",
-            "AyABKAUiTAoTU3R1ZGVudFNjaGVkdWxlc0RUTxIRCglTdHVkZW50SWQYASAB",
-            "KAUSEgoKU2NoZWR1bGVJZBgCIAEoBRIOCgZTdGF0dXMYAyABKAUyogIKCVNj",
-            "aGVkdWxlchI1CgtHZXRTY2hlZHVsZRITLkdldFNjaGVkdWxlUmVxdWVzdBoR",
-            "LlNjaGVkdWxlUmVzcG9uc2USPQoSR2V0U3R1ZGVudFNjaGVkdWxlEhAuU2No",
-            "ZWR1bGVSZXF1ZXN0GhUuTGlzdFNjaGVkdWxlUmVzcG9uc2USPQoSR2V0VGVh",
-            "Y2hlclNjaGVkdWxlEhAuU2NoZWR1bGVSZXF1ZXN0GhUuTGlzdFNjaGVkdWxl",
-            "UmVzcG9uc2USYAoaR2V0U3R1ZGVudENvdXJzZUF0dGVuZGFuY2USHS5TdHVk",
-            "ZW50Q291cnNlQXR0ZW5hY2VSZXF1ZXN0GiMuTGlzdFN0dWRlbnRDb3Vyc2VB",
-            "dHRlbmFuY2VSZXNwb25zZUIXqgIUQXR0ZW5kYW5jZUdycGNTZXJ2ZXJiBnBy",
-            "b3RvMw=="));
+            "AyABKAUiagoTU3R1ZGVudFNjaGVkdWxlc0RUTxIRCglTdHVkZW50SWQYASAB",
+            "KAUSEgoKU2NoZWR1bGVJZBgCIAEoBRIOCgZTdGF0dXMYAyABKAUSHAoHc3R1",
+            "ZGVudBgEIAEoCzILLlN0dWRlbnREdG8iNAoKU3R1ZGVudER0bxIKCgJpZBgB",
+            "IAEoBRIMCgRjb2RlGAIgASgJEgwKBG5hbWUYAyABKAkyogIKCVNjaGVkdWxl",
+            "chI1CgtHZXRTY2hlZHVsZRITLkdldFNjaGVkdWxlUmVxdWVzdBoRLlNjaGVk",
+            "dWxlUmVzcG9uc2USPQoSR2V0U3R1ZGVudFNjaGVkdWxlEhAuU2NoZWR1bGVS",
+            "ZXF1ZXN0GhUuTGlzdFNjaGVkdWxlUmVzcG9uc2USPQoSR2V0VGVhY2hlclNj",
+            "aGVkdWxlEhAuU2NoZWR1bGVSZXF1ZXN0GhUuTGlzdFNjaGVkdWxlUmVzcG9u",
+            "c2USYAoaR2V0U3R1ZGVudENvdXJzZUF0dGVuZGFuY2USHS5TdHVkZW50Q291",
+            "cnNlQXR0ZW5hY2VSZXF1ZXN0GiMuTGlzdFN0dWRlbnRDb3Vyc2VBdHRlbmFu",
+            "Y2VSZXNwb25zZUIXqgIUQXR0ZW5kYW5jZUdycGNTZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -69,7 +70,8 @@ namespace AttendanceGrpcServer {
             new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.RoomDto), global::AttendanceGrpcServer.RoomDto.Parser, new[]{ "Id", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.CourseDto), global::AttendanceGrpcServer.CourseDto.Parser, new[]{ "Id", "Code", "Name", "TimeSlot", "StartDate", "EndDate", "SubjectId", "Subject" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.SubjectDto), global::AttendanceGrpcServer.SubjectDto.Parser, new[]{ "Id", "Name", "NumberSlot" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.StudentSchedulesDTO), global::AttendanceGrpcServer.StudentSchedulesDTO.Parser, new[]{ "StudentId", "ScheduleId", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.StudentSchedulesDTO), global::AttendanceGrpcServer.StudentSchedulesDTO.Parser, new[]{ "StudentId", "ScheduleId", "Status", "Student" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.StudentDto), global::AttendanceGrpcServer.StudentDto.Parser, new[]{ "Id", "Code", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2725,6 +2727,7 @@ namespace AttendanceGrpcServer {
       studentId_ = other.studentId_;
       scheduleId_ = other.scheduleId_;
       status_ = other.status_;
+      student_ = other.student_ != null ? other.student_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2766,6 +2769,17 @@ namespace AttendanceGrpcServer {
       }
     }
 
+    /// <summary>Field number for the "student" field.</summary>
+    public const int StudentFieldNumber = 4;
+    private global::AttendanceGrpcServer.StudentDto student_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AttendanceGrpcServer.StudentDto Student {
+      get { return student_; }
+      set {
+        student_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as StudentSchedulesDTO);
@@ -2782,6 +2796,7 @@ namespace AttendanceGrpcServer {
       if (StudentId != other.StudentId) return false;
       if (ScheduleId != other.ScheduleId) return false;
       if (Status != other.Status) return false;
+      if (!object.Equals(Student, other.Student)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2791,6 +2806,7 @@ namespace AttendanceGrpcServer {
       if (StudentId != 0) hash ^= StudentId.GetHashCode();
       if (ScheduleId != 0) hash ^= ScheduleId.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
+      if (student_ != null) hash ^= Student.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2819,6 +2835,10 @@ namespace AttendanceGrpcServer {
         output.WriteRawTag(24);
         output.WriteInt32(Status);
       }
+      if (student_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Student);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2840,6 +2860,10 @@ namespace AttendanceGrpcServer {
         output.WriteRawTag(24);
         output.WriteInt32(Status);
       }
+      if (student_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Student);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2857,6 +2881,9 @@ namespace AttendanceGrpcServer {
       }
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Status);
+      }
+      if (student_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Student);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2877,6 +2904,12 @@ namespace AttendanceGrpcServer {
       }
       if (other.Status != 0) {
         Status = other.Status;
+      }
+      if (other.student_ != null) {
+        if (student_ == null) {
+          Student = new global::AttendanceGrpcServer.StudentDto();
+        }
+        Student.MergeFrom(other.Student);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2904,6 +2937,13 @@ namespace AttendanceGrpcServer {
             Status = input.ReadInt32();
             break;
           }
+          case 34: {
+            if (student_ == null) {
+              Student = new global::AttendanceGrpcServer.StudentDto();
+            }
+            input.ReadMessage(Student);
+            break;
+          }
         }
       }
     #endif
@@ -2928,6 +2968,257 @@ namespace AttendanceGrpcServer {
           }
           case 24: {
             Status = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (student_ == null) {
+              Student = new global::AttendanceGrpcServer.StudentDto();
+            }
+            input.ReadMessage(Student);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class StudentDto : pb::IMessage<StudentDto>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StudentDto> _parser = new pb::MessageParser<StudentDto>(() => new StudentDto());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StudentDto> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::AttendanceGrpcServer.ScheduleReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StudentDto() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StudentDto(StudentDto other) : this() {
+      id_ = other.id_;
+      code_ = other.code_;
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StudentDto Clone() {
+      return new StudentDto(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "code" field.</summary>
+    public const int CodeFieldNumber = 2;
+    private string code_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Code {
+      get { return code_; }
+      set {
+        code_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StudentDto);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StudentDto other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Code != other.Code) return false;
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Code.Length != 0) hash ^= Code.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Code);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Code);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (Code.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Code);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StudentDto other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.Code.Length != 0) {
+        Code = other.Code;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Code = input.ReadString();
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Code = input.ReadString();
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
             break;
           }
         }

@@ -80,18 +80,32 @@ namespace AttendanceMananagmentProject.Mappers
             CreateMap<SubjectDTO, Subject>();
             CreateMap<AttendanceGrpcServer.Dto.StudentSchedules.StudentSchedulesDTO, StudentSchedule>();
 
+            //Grpc
+            
             CreateMap<Schedule, ScheduleResponse>()
                     .ForMember(dest => dest.StudentSchedules, opt => opt.Ignore())
-                    .ForMember(dest => dest.Date, opt => opt.MapFrom(src => Timestamp.FromDateTime(src.Date.ToUniversalTime())))
+                    .ForMember(dest => dest.Date, opt => opt.MapFrom(src => Timestamp.FromDateTime(src.Date.ToLocalTime().ToUniversalTime())))
                     .ForMember(dest => dest.Course, opt => opt.MapFrom(src => new CourseDto
                     {
                         Code = src.Course.Code,
                         Name = src.Course.Name,
-                        StartDate = Timestamp.FromDateTime(src.Course.StartDate.ToUniversalTime()),
+                        StartDate = Timestamp.FromDateTime(src.Course.StartDate.ToLocalTime().ToUniversalTime()),
                         TimeSlot = src.Course.TimeSlot,
                     }))
                     .ForMember(dest => dest.Room , opt=> opt.MapFrom(src => new RoomDto { Id = src.RoomId , Name = src.Room.Name}))
                     ;
+
+            CreateMap<StudentSchedule, AttendanceGrpcServer.StudentSchedulesDTO>();
+
+            CreateMap<StudentSchedule, AttendanceGrpcServer.AttendanceDto>();
+            CreateMap<StudentCourse, StudentCourseResponse>()
+                .ForMember(dest => dest.Course, opt => opt.MapFrom(src => new CourseDto
+				{
+					Code = src.Course.Code,
+					Name = src.Course.Name,
+					StartDate = Timestamp.FromDateTime(src.Course.StartDate.ToLocalTime().ToUniversalTime()),
+					TimeSlot = src.Course.TimeSlot,
+				}));
 
         }
     }

@@ -47,6 +47,7 @@ message ScheduleResponse
        int32 roomId = 7;
        RoomDto room = 8;
        repeated StudentSchedulesDTO StudentSchedules = 9;
+      
        
 }
 
@@ -83,5 +84,13 @@ message StudentSchedulesDTO {
     int32 StudentId = 1;
     int32 ScheduleId = 2;
     int32 Status = 3;
+    StudentDto student = 4;
     
 }
+message StudentDto {
+    int32 id =1;
+    string code = 2;
+    string name = 3;
+
+}
+

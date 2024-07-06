@@ -1,12 +1,101 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|c:\\users\\admin\\source\\repos\\attendancegrpcserver\\attendancegrpcserver\\protos\\schedule.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|solutionrelative:attendancegrpcserver\\protos\\schedule.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|c:\\users\\admin\\source\\repos\\attendancegrpcserver\\attendancegrpcserver\\services\\schedulerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|solutionrelative:attendancegrpcserver\\services\\schedulerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|c:\\users\\admin\\source\\repos\\attendancegrpcserver\\attendancegrpcserver\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|solutionrelative:attendancegrpcserver\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\obj\\Debug\\net6.0\\Protos\\ScheduleGrpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AttendanceGrpcServer\\obj\\Debug\\net6.0\\Protos\\ScheduleGrpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|c:\\users\\admin\\source\\repos\\attendancegrpcserver\\attendancegrpcserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{478784EE-560E-469F-8C87-3AB0B2919566}|AttendanceGrpcServer\\AttendanceGrpcServer.csproj|solutionrelative:attendancegrpcserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ScheduleGrpc.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\obj\\Debug\\net6.0\\Protos\\ScheduleGrpc.cs",
+              "RelativeDocumentMoniker": "AttendanceGrpcServer\\obj\\Debug\\net6.0\\Protos\\ScheduleGrpc.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\obj\\Debug\\net6.0\\Protos\\ScheduleGrpc.cs",
+              "RelativeToolTip": "AttendanceGrpcServer\\obj\\Debug\\net6.0\\Protos\\ScheduleGrpc.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAlwGkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T15:20:48.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Mappers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "AttendanceGrpcServer\\Mappers\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Mappers\\MappingProfile.cs",
+              "RelativeToolTip": "AttendanceGrpcServer\\Mappers\\MappingProfile.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAQwF8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T15:17:03.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "schedule.proto",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Protos\\schedule.proto",
+              "RelativeDocumentMoniker": "AttendanceGrpcServer\\Protos\\schedule.proto",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Protos\\schedule.proto",
+              "RelativeToolTip": "AttendanceGrpcServer\\Protos\\schedule.proto",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAowGAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2024-07-06T15:09:36.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SchedulerService.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Services\\SchedulerService.cs",
+              "RelativeDocumentMoniker": "AttendanceGrpcServer\\Services\\SchedulerService.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Services\\SchedulerService.cs",
+              "RelativeToolTip": "AttendanceGrpcServer\\Services\\SchedulerService.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAuwHYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T15:02:44.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Program.cs",
+              "RelativeDocumentMoniker": "AttendanceGrpcServer\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\AttendanceGrpcServer\\AttendanceGrpcServer\\Program.cs",
+              "RelativeToolTip": "AttendanceGrpcServer\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T15:02:33.258Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

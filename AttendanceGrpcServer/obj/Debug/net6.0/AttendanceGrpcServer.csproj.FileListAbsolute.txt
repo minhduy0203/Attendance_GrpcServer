@@ -67,3 +67,4 @@ C:\Users\admin\source\repos\AttendanceGrpcServer\AttendanceGrpcServer\obj\Debug\
 C:\Users\admin\source\repos\AttendanceGrpcServer\AttendanceGrpcServer\obj\Debug\net6.0\AttendanceGrpcServer.pdb
 C:\Users\admin\source\repos\AttendanceGrpcServer\AttendanceGrpcServer\obj\Debug\net6.0\AttendanceGrpcServer.genruntimeconfig.cache
 C:\Users\admin\source\repos\AttendanceGrpcServer\AttendanceGrpcServer\obj\Debug\net6.0\ref\AttendanceGrpcServer.dll
+C:\Users\admin\source\repos\AttendanceGrpcServer\AttendanceGrpcServer\obj\Debug\net6.0\AttendanceGrpcServer.sourcelink.json

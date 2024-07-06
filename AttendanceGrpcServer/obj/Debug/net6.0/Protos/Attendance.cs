@@ -24,16 +24,17 @@ namespace AttendanceGrpcServer {
     static AttendanceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdQcm90b3MvYXR0ZW5kYW5jZS5wcm90byJIChVBdHRlbmRhbmNlTGlzdFJl",
-            "cXVlc3QSCwoDc2lkGAEgAygFEhIKCnNjaGVkdWxlSWQYAiABKAUSDgoGc3Rh",
-            "dHVzGAMgASgFIjYKFkF0dGVuZGFuY2VMaXN0UmVzcG9uc2USCwoDc2lkGAEg",
-            "AygFEg8KB21lc3NhZ2UYAiABKAkyUAoLQXR0ZW5kYW5jZXISQQoOQXR0ZW5k",
-            "U3R1ZGVudHMSFi5BdHRlbmRhbmNlTGlzdFJlcXVlc3QaFy5BdHRlbmRhbmNl",
-            "TGlzdFJlc3BvbnNlQheqAhRBdHRlbmRhbmNlR3JwY1NlcnZlcmIGcHJvdG8z"));
+            "ChdQcm90b3MvYXR0ZW5kYW5jZS5wcm90byJKChVBdHRlbmRhbmNlTGlzdFJl",
+            "cXVlc3QSCwoDc2lkGAEgAygFEhIKCnNjaGVkdWxlSWQYAiABKAUSEAoIc3Rh",
+            "dHVzZXMYAyADKAUiNgoWQXR0ZW5kYW5jZUxpc3RSZXNwb25zZRILCgNzaWQY",
+            "ASADKAUSDwoHbWVzc2FnZRgCIAEoCTJQCgtBdHRlbmRhbmNlchJBCg5BdHRl",
+            "bmRTdHVkZW50cxIWLkF0dGVuZGFuY2VMaXN0UmVxdWVzdBoXLkF0dGVuZGFu",
+            "Y2VMaXN0UmVzcG9uc2VCF6oCFEF0dGVuZGFuY2VHcnBjU2VydmVyYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.AttendanceListRequest), global::AttendanceGrpcServer.AttendanceListRequest.Parser, new[]{ "Sid", "ScheduleId", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.AttendanceListRequest), global::AttendanceGrpcServer.AttendanceListRequest.Parser, new[]{ "Sid", "ScheduleId", "Statuses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.AttendanceListResponse), global::AttendanceGrpcServer.AttendanceListResponse.Parser, new[]{ "Sid", "Message" }, null, null, null, null)
           }));
     }
@@ -72,7 +73,7 @@ namespace AttendanceGrpcServer {
     public AttendanceListRequest(AttendanceListRequest other) : this() {
       sid_ = other.sid_.Clone();
       scheduleId_ = other.scheduleId_;
-      status_ = other.status_;
+      statuses_ = other.statuses_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -102,15 +103,14 @@ namespace AttendanceGrpcServer {
       }
     }
 
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 3;
-    private int status_;
+    /// <summary>Field number for the "statuses" field.</summary>
+    public const int StatusesFieldNumber = 3;
+    private static readonly pb::FieldCodec<int> _repeated_statuses_codec
+        = pb::FieldCodec.ForInt32(26);
+    private readonly pbc::RepeatedField<int> statuses_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
+    public pbc::RepeatedField<int> Statuses {
+      get { return statuses_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -128,7 +128,7 @@ namespace AttendanceGrpcServer {
       }
       if(!sid_.Equals(other.sid_)) return false;
       if (ScheduleId != other.ScheduleId) return false;
-      if (Status != other.Status) return false;
+      if(!statuses_.Equals(other.statuses_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -137,7 +137,7 @@ namespace AttendanceGrpcServer {
       int hash = 1;
       hash ^= sid_.GetHashCode();
       if (ScheduleId != 0) hash ^= ScheduleId.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      hash ^= statuses_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -159,10 +159,7 @@ namespace AttendanceGrpcServer {
         output.WriteRawTag(16);
         output.WriteInt32(ScheduleId);
       }
-      if (Status != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Status);
-      }
+      statuses_.WriteTo(output, _repeated_statuses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -177,10 +174,7 @@ namespace AttendanceGrpcServer {
         output.WriteRawTag(16);
         output.WriteInt32(ScheduleId);
       }
-      if (Status != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Status);
-      }
+      statuses_.WriteTo(ref output, _repeated_statuses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -194,9 +188,7 @@ namespace AttendanceGrpcServer {
       if (ScheduleId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScheduleId);
       }
-      if (Status != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Status);
-      }
+      size += statuses_.CalculateSize(_repeated_statuses_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -212,9 +204,7 @@ namespace AttendanceGrpcServer {
       if (other.ScheduleId != 0) {
         ScheduleId = other.ScheduleId;
       }
-      if (other.Status != 0) {
-        Status = other.Status;
-      }
+      statuses_.Add(other.statuses_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -238,8 +228,9 @@ namespace AttendanceGrpcServer {
             ScheduleId = input.ReadInt32();
             break;
           }
+          case 26:
           case 24: {
-            Status = input.ReadInt32();
+            statuses_.AddEntriesFrom(input, _repeated_statuses_codec);
             break;
           }
         }
@@ -265,8 +256,9 @@ namespace AttendanceGrpcServer {
             ScheduleId = input.ReadInt32();
             break;
           }
+          case 26:
           case 24: {
-            Status = input.ReadInt32();
+            statuses_.AddEntriesFrom(ref input, _repeated_statuses_codec);
             break;
           }
         }

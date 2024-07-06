@@ -1,0 +1,4 @@
+obj\Debug\net6.0\Protos/Studentcourse.cs \
+obj\Debug\net6.0\Protos/StudentcourseGrpc.cs: C:/Users/admin/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/schedule.proto\
+ Protos/studentcourse.proto
