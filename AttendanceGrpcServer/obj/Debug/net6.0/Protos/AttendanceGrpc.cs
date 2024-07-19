@@ -49,6 +49,10 @@ namespace AttendanceGrpcServer {
     static readonly grpc::Marshaller<global::AttendanceGrpcServer.AttendanceListRequest> __Marshaller_AttendanceListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.AttendanceListRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::AttendanceGrpcServer.AttendanceListResponse> __Marshaller_AttendanceListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.AttendanceListResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::AttendanceGrpcServer.GetScheduleRequest> __Marshaller_GetScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.GetScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::AttendanceGrpcServer.ScheduleResponse> __Marshaller_ScheduleResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::AttendanceGrpcServer.ScheduleResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::AttendanceGrpcServer.AttendanceListRequest, global::AttendanceGrpcServer.AttendanceListResponse> __Method_AttendStudents = new grpc::Method<global::AttendanceGrpcServer.AttendanceListRequest, global::AttendanceGrpcServer.AttendanceListResponse>(
@@ -57,6 +61,14 @@ namespace AttendanceGrpcServer {
         "AttendStudents",
         __Marshaller_AttendanceListRequest,
         __Marshaller_AttendanceListResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::AttendanceGrpcServer.GetScheduleRequest, global::AttendanceGrpcServer.ScheduleResponse> __Method_GetSchedule = new grpc::Method<global::AttendanceGrpcServer.GetScheduleRequest, global::AttendanceGrpcServer.ScheduleResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSchedule",
+        __Marshaller_GetScheduleRequest,
+        __Marshaller_ScheduleResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -74,6 +86,12 @@ namespace AttendanceGrpcServer {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::AttendanceGrpcServer.ScheduleResponse> GetSchedule(global::AttendanceGrpcServer.GetScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -82,7 +100,8 @@ namespace AttendanceGrpcServer {
     public static grpc::ServerServiceDefinition BindService(AttendancerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_AttendStudents, serviceImpl.AttendStudents).Build();
+          .AddMethod(__Method_AttendStudents, serviceImpl.AttendStudents)
+          .AddMethod(__Method_GetSchedule, serviceImpl.GetSchedule).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -93,6 +112,7 @@ namespace AttendanceGrpcServer {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AttendancerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_AttendStudents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AttendanceGrpcServer.AttendanceListRequest, global::AttendanceGrpcServer.AttendanceListResponse>(serviceImpl.AttendStudents));
+      serviceBinder.AddMethod(__Method_GetSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::AttendanceGrpcServer.GetScheduleRequest, global::AttendanceGrpcServer.ScheduleResponse>(serviceImpl.GetSchedule));
     }
 
   }

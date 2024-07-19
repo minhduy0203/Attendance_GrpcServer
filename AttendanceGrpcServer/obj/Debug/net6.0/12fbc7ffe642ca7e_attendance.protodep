@@ -1,2 +1,4 @@
 obj\Debug\net6.0\Protos/Attendance.cs \
-obj\Debug\net6.0\Protos/AttendanceGrpc.cs: Protos/attendance.proto
+obj\Debug\net6.0\Protos/AttendanceGrpc.cs: C:/Users/HP/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/schedule.proto\
+ Protos/attendance.proto

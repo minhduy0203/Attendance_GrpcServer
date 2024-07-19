@@ -1,9 +1,13 @@
 ﻿syntax = "proto3";
 option csharp_namespace = "AttendanceGrpcServer";
+import "Protos/schedule.proto";
+
 
 service Attendancer
 {
    rpc  AttendStudents(AttendanceListRequest) returns (AttendanceListResponse);
+    rpc GetSchedule(GetScheduleRequest) returns (ScheduleResponse);
+
 }
 
 message AttendanceListRequest {

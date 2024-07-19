@@ -24,15 +24,16 @@ namespace AttendanceGrpcServer {
     static AttendanceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdQcm90b3MvYXR0ZW5kYW5jZS5wcm90byJKChVBdHRlbmRhbmNlTGlzdFJl",
-            "cXVlc3QSCwoDc2lkGAEgAygFEhIKCnNjaGVkdWxlSWQYAiABKAUSEAoIc3Rh",
-            "dHVzZXMYAyADKAUiNgoWQXR0ZW5kYW5jZUxpc3RSZXNwb25zZRILCgNzaWQY",
-            "ASADKAUSDwoHbWVzc2FnZRgCIAEoCTJQCgtBdHRlbmRhbmNlchJBCg5BdHRl",
-            "bmRTdHVkZW50cxIWLkF0dGVuZGFuY2VMaXN0UmVxdWVzdBoXLkF0dGVuZGFu",
-            "Y2VMaXN0UmVzcG9uc2VCF6oCFEF0dGVuZGFuY2VHcnBjU2VydmVyYgZwcm90",
-            "bzM="));
+            "ChdQcm90b3MvYXR0ZW5kYW5jZS5wcm90bxoVUHJvdG9zL3NjaGVkdWxlLnBy",
+            "b3RvIkoKFUF0dGVuZGFuY2VMaXN0UmVxdWVzdBILCgNzaWQYASADKAUSEgoK",
+            "c2NoZWR1bGVJZBgCIAEoBRIQCghzdGF0dXNlcxgDIAMoBSI2ChZBdHRlbmRh",
+            "bmNlTGlzdFJlc3BvbnNlEgsKA3NpZBgBIAMoBRIPCgdtZXNzYWdlGAIgASgJ",
+            "MocBCgtBdHRlbmRhbmNlchJBCg5BdHRlbmRTdHVkZW50cxIWLkF0dGVuZGFu",
+            "Y2VMaXN0UmVxdWVzdBoXLkF0dGVuZGFuY2VMaXN0UmVzcG9uc2USNQoLR2V0",
+            "U2NoZWR1bGUSEy5HZXRTY2hlZHVsZVJlcXVlc3QaES5TY2hlZHVsZVJlc3Bv",
+            "bnNlQheqAhRBdHRlbmRhbmNlR3JwY1NlcnZlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::AttendanceGrpcServer.ScheduleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.AttendanceListRequest), global::AttendanceGrpcServer.AttendanceListRequest.Parser, new[]{ "Sid", "ScheduleId", "Statuses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::AttendanceGrpcServer.AttendanceListResponse), global::AttendanceGrpcServer.AttendanceListResponse.Parser, new[]{ "Sid", "Message" }, null, null, null, null)

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "AttendanceGrpcServer";
+
+
+// The greeting service definition.
+service Courser {
+  // Sends a greeting
+  rpc ImportCourse (ImportCourseRequest) returns (ImportCourseResponse);
+}
+
+// The request message containing the user's name.
+message ImportCourseRequest {
+	bytes data = 1;
+	string file_name = 2;
+}
+
+message ImportCourseResponse {
+	bytes data = 1;
+	string file_name = 2;
+}
